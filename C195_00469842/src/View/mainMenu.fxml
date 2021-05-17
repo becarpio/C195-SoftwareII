@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="750.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainMenuController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="1075.0" spacing="50.0">
+         <children>
+            <Label fx:id="MainMenuTitle" text="Appointments">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="886.0" spacing="50.0">
+               <children>
+                  <RadioButton fx:id="MainMthRdio" mnemonicParsing="false" onAction="#MainChngButton" text="Monthly">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="MainAppointmentGrp" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="MainWkRdio" mnemonicParsing="false" onAction="#MainChngButton" text="Weekly" toggleGroup="$MainAppointmentGrp" />
+                  <RadioButton fx:id="MainDailyRdio" layoutX="623.0" layoutY="21.0" mnemonicParsing="false" onAction="#MainChngButton" text="Daily" toggleGroup="$MainAppointmentGrp" />
+                  <RadioButton fx:id="MainAllRdio" mnemonicParsing="false" onAction="#MainChngButton" text="All" toggleGroup="$MainAppointmentGrp" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <TableView fx:id="MainAptTbl" onMouseClicked="#handleMouseClick" prefHeight="685.0" prefWidth="1075.0">
+        <columns>
+          <TableColumn fx:id="MainStartCol" prefWidth="117.0" text="Start" />
+            <TableColumn fx:id="MainEndCol" minWidth="0.0" prefWidth="120.0" text="End" />
+            <TableColumn fx:id="MainCustCol" prefWidth="194.0" text="Customer" />
+            <TableColumn fx:id="MainContactCol" prefWidth="141.0" text="Contact" />
+            <TableColumn fx:id="MainTypeCol" prefWidth="93.0" text="Type" />
+            <TableColumn fx:id="MainDescriptionCol" prefWidth="254.0" text="Description" />
+            <TableColumn fx:id="MainLocCol" prefWidth="146.0" text="Location" />
+        </columns>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TableView>
+      <HBox prefHeight="100.0" prefWidth="1075.0" spacing="10.0">
+         <children>
+            <Button fx:id="MainMngCustBtn" mnemonicParsing="false" onAction="#MainMngCust" prefHeight="31.0" prefWidth="181.0" text="Manage Customers" />
+            <Button fx:id="MainAddAptBtn" mnemonicParsing="false" onAction="#MainAddApt" prefHeight="31.0" prefWidth="181.0" text="Add Appointment" />
+            <Button fx:id="MainModAptBtn" mnemonicParsing="false" onAction="#MainModApt" prefHeight="31.0" prefWidth="181.0" text="Modify Appointment" />
+            <Button fx:id="MainDelAptBtn" mnemonicParsing="false" onAction="#MainDelApt" prefHeight="31.0" prefWidth="181.0" text="Delete Appointment" />
+            <Button fx:id="MainReportBtn" layoutX="512.0" layoutY="20.0" mnemonicParsing="false" onAction="#MainReport" prefHeight="31.0" prefWidth="181.0" text="Reports" />
+            <Button fx:id="MainExitBtn" mnemonicParsing="false" onAction="#MainExit" prefHeight="31.0" prefWidth="80.0" text="Exit" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

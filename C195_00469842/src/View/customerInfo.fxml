@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustInfoController">
+   <children>
+      <GridPane hgap="10.0" vgap="10.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="104.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="361.0" minWidth="10.0" prefWidth="346.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="CustInfoName" text="Name:" />
+            <Label fx:id="CustInfoAddress" text="Address: " GridPane.rowIndex="1" />
+            <Label fx:id="CustInfoAddress2" text="Address 2:" GridPane.rowIndex="2" />
+            <Label fx:id="CustInfoCity" text="City:" GridPane.rowIndex="3" />
+            <Label fx:id="CustInfoZip" text="Postal Code:" GridPane.rowIndex="4" />
+            <Label fx:id="CustInfoPhone" text="Phone:" GridPane.rowIndex="5" />
+            <Label fx:id="CustInfoActive" text="Active:" GridPane.rowIndex="6" />
+            <Label fx:id="CustInfoNameLbl" text="Label" GridPane.columnIndex="1" />
+            <Label fx:id="CustInfoAddressLbl" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="CustInfoAddress2Lbl" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="CustInfoCityLbl" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="CustInfoZipLbl" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="CustInfoPhoneLbl" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="CustInfoActiveLbl" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+      <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="450.0">
+         <children>
+            <Button fx:id="CustInfoBackBtn" mnemonicParsing="false" onAction="#CustInfoBack" text="Back" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

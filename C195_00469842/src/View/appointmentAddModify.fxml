@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AptAddModController">
+   <children>
+      <GridPane hgap="10.0" vgap="10.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="104.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="361.0" minWidth="10.0" prefWidth="346.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="AptDate" text="Date:" />
+            <Label fx:id="AptStart" text="Start Time:" GridPane.rowIndex="1" />
+            <Label fx:id="AptEnd" text="End Time:" GridPane.rowIndex="2" />
+            <Label fx:id="AptTitle" text="Title:" GridPane.rowIndex="3" />
+            <Label fx:id="AptCustomer" text="Customer:" GridPane.rowIndex="4" />
+            <Label fx:id="AptContact" text="Contact:" GridPane.rowIndex="5" />
+            <Label fx:id="AptType" text="Type:" GridPane.rowIndex="6" />
+            <Label fx:id="AptDesc" text="Description:" GridPane.rowIndex="7" />
+            <Label fx:id="AptLoc" text="Location:" GridPane.rowIndex="8" />
+            <DatePicker fx:id="AptAddDatePicker" prefHeight="31.0" prefWidth="393.0" GridPane.columnIndex="1" />
+            <HBox spacing="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ComboBox fx:id="AptAddModStartHours" prefHeight="31.0" prefWidth="100.0" />
+                  <ComboBox fx:id="AptAddModStartMins" prefHeight="31.0" prefWidth="100.0" />
+               </children>
+            </HBox>
+            <HBox spacing="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ComboBox fx:id="AptAddModEndHours" prefHeight="31.0" prefWidth="100.0" />
+                  <ComboBox fx:id="AptAddModEndMins" prefHeight="31.0" prefWidth="100.0" />
+               </children>
+            </HBox>
+            <TextField fx:id="AptTitleTxt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="AptCustomerBox" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="AptContactTxt" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="AptTypeTxt" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="AptDescTxt" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="AptLocTxt" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+      <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="450.0" spacing="10.0">
+         <children>
+            <Button fx:id="AptSaveBtn" mnemonicParsing="false" onAction="#AptSave" text="Save" />
+            <Button fx:id="AptBackTxt" mnemonicParsing="false" onAction="#AptBack" text="Back" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
